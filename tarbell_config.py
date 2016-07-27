@@ -39,6 +39,12 @@ S3_BUCKETS = {
 
 # Default template variables
 DEFAULT_CONTEXT = {
+   'OMNITURE': {   'domain': 'chicagotribune.com',
+                    'section': 'news',
+                    'sitename': 'Chicago Tribune',
+                    'subsection': 'local',
+                    'subsubsection': '',
+                    'type': 'dataproject'},
     'ad_path': u'/4011/trb.chicagotribune/news/local',
     'analytics_path': u'/news/local',
     'data': {   'another_key': {   'description': u'This is another description.',
