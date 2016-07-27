@@ -1,24 +1,102 @@
 {% extends "_base.html" %}
 
+{% block scripts %}
+<script type='text/javascript' src='js/vendor.min.js'></script>
+<script type='text/javascript' src='js/app.min.js'></script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+{% endblock %}
+
+{% block meta %}
+<meta property="fb:app_id" content="306836229411287" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+{% endblock %}
+
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="advert top-ad" data-ad-type="leaderboard"></div>
-            {% include "_social_row.html" %}
-            <h1 itemprop="headline">Welcome to Tarbell!</h1>
-            <p>Brought to you by <span itemprop="author">the Chicago Tribune News Apps team</span></p>
-            <p>Updated last <span itemprop="datePublished">July 15, 2014</span></p>
-        </div>
+<div class="container-fluid">
+    <div class='advert-wrapper'>
+        <div class='advert center' data-ad-type='leaderboard'></div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-8" itemprop="articleBody">
-            <p>We hope you will find this template helpful in getting your project started. We've built in some common features that you may need. Here's a quick overview:</p>
-            <p><strong><a href="http://docs.tribapps.com/schema.html">Schema.org tags</a>:</strong> Schema tags help Google know more about your project when it turns up in a search. By default, this blueprint inherits from <a href="http://schema.org/NewsArticle">the NewsArticle</a> schema tag. We define a headline, author, publish date, article body, and comments. You can change this by overriding the <code>schema</code> block on the <code>body</code> tag. New to schema tags? Not sure if <code>NewsArticle</code> is right for your project? <a href="http://docs.tribapps.com/schema.html">Read our handy documentation to get started.</a></p>
-            <p><strong><a href="http://docs.tribapps.com/ads.html">Ads</a>:</strong> Our ad library is present in Tarbell projects by default. You can <a href="http://docs.tribapps.com/ads.html">read more about how to use it here</a>, including how to use the standard ad map, or just crib off of our examples on this page.</p>
-            <p><strong><a href="http://newsapps.github.io/bootstrap/">Bootstrap 3</a>:</strong> We include our custom version of Bootstrap 3 in this template. Bootstrap 3 introduced different names for grid components. Of note, Bootstrap requires a containing element to wrap site contents and house our grid system. You may choose one of two containers to use in your projects. Note that, due to padding and more, neither container is nestable. Use <code>.container</code> for a responsive fixed width container. Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport. <a href="http://newsapps.github.io/bootstrap/css/#grid">Read more here</a> before you start building!</p>
+    <article class='constrained1024'>
+        <section id='intro'>
+            
+            <h1>{{ hede|process_text() }}</h1>
+            <h2>{{ subhede }}</h2>
+            <div class='advert-wrapper right'>
+                <div class='advert' data-ad-type='cube'></div>
+            </div>
+            {{ chatter|markdown }}
+
+            {#
+
+            <!-- <
+                        <hr>
+                        a id='moments-link' href='lollapalooza-seminal-moments.html'>
+                <img class='hidden-phone' src='img/daft-punk-teaser.jpg' alt = 'Defining moments for the festival'/>
+                <h3>{{ moments_teaser|process_text() }}</h3>
+            </a>
+
+            <div class='clearfix'></div>
+            <hr class=''>
+             -->#}
+            
+        </section>
+        <section id='chart-wrapper' class='visible-md-block visible-lg-block'>
+            {######  TABLET+ CHARTING #####}
+            <a href='javascript:void()' class='zoomer btn btn-small'>ZOOM IN</a>
+            <a href="javascript:resetButtons('true')" class='btn btn-small'>RESET HIGHLIGHTS</a>
+            <em>Click or hover to highlight a genre/band. Zoom in for more information</em>
+            <div id='chart-key-wrapper'>
+                <div id='chart-key' data-spy='affix' >
+                    <div class='clearfix'></div>
+                    <ul class='inline unstyled'>
+                    {% for genre in genres %}
+                        <li>
+                            <a href='javascript:void()' class='genre-btn btn .genre-btn--{{ genre.genre_class }} nobreak' data-genre='{{ genre.genre_class }}'>
+                                <span class='box box--{{ genre.genre_class }}'></span>
+                                {% if genre.genre|lower == 'other' %}
+                                    {{ genre.genre }}&#42;
+                                {% else %}
+                                    {{ genre.genre }}
+                                {% endif %}
+                            </a>
+                            </li>
+                    {% endfor %}
+                    </ul>
+                    <table class='table unstyled'>
+                        <thead>
+                            <tr>
+                            {% set festivals = [1991,1992,1993,1994,1995,1996,1997,2003,2005,2006,2007,2008,2009, 2010, 2011, 2012,2013, 2014, 2015, 2016] %}
+                            {% for festival in festivals %}
+                                    <th>{{ festival }}</th>
+                            {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                <div class='clearfix'></div>
+                </div>
+            </div>
+            {% include '_lolla-chart.html' %}
+        </section>
+        <section id='chart-wrapper-mobile' class='visible-sm-block visible-xs-block'>
+            <div class="alert visible-sm-block visible-xs-block">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ dont_use_phone_alert|process_text }}
+            </div>
+            {######  PHONE CHARTING #####}
+            {% include '_mobile-chart.html' %}
+
+
+        </section>
+        <div id='note' class='credits'>
+            <p>{{ other_note }}</p>
+            <p>{{ sources }}</p>
+            <p>{{ credits }}</p>
         </div>
-        <div class="advert col-xs-12 col-sm-4" data-ad-type="shrinky-cube"></div>
-    </div>
+</article>
+    {% include '_facebook_comments.html' %}
 </div>
 {% endblock content %}
