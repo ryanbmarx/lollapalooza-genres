@@ -1,0 +1,47 @@
+<div id='mobile-color-key'>
+<!-- 	<p><span class='box box--indie'></span>Indie</p>
+	<p><span class='box box--alternative'></span>Alternative</p>
+	<p><span class='box box--rap-hiphop'></span>Rap/Hip-hop</p>
+	<p><span class='box box--electronica'></span>Electronica</p>
+	<p><span class='box box--dance-house'></span>Dance/House</p>
+	<p><span class='box box--rock'></span>Rock</p>
+	<p><span class='box box--punk'></span>Punk</p>
+	<p><span class='box box--pop'></span>Pop</p>
+	<p><span class='box box-- other'></span>Other*</p> -->
+
+	{%- for genre in genres %}
+		<p>
+			<span class='box box--{{ genre.genre_class }}'></span>
+			{% if genre.genre|lower == 'other' %}
+				{{ genre.genre }}&#42;
+			{% else %}
+				{{ genre.genre }}
+			{% endif %}
+		</p>
+	{% endfor %}
+</div>
+<table class='unstyled table'>
+	<thead>
+		<tr>
+			<th>Year</th>
+			<th>Performers</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for festival in festivals %}
+			<tr>
+				<td class='year'>{{ festival }}</td>
+				<td>
+				{% for genre in genres %}
+				<!-- {{ totals["year" ~ festival ~ "_per"] }} -->
+					<div class='mobile-band mobile-band--{{ genre.genre_class }}' style="width:{{ totals["year" ~ festival ~ "_per"][genre.genre_class]  }}%"></div>
+				{% endfor %}
+				</td>
+				<td class='totals'>
+					{{totals["year"~festival].totals}}
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>

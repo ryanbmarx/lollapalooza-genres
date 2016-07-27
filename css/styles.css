@@ -1,0 +1,374 @@
+/* NOTES */
+/*
+cubs_red	#CB3333
+cubs_blue	#056699
+chicago_blue	#B4DDF1
+chicago_red	#ED2224
+
+*/
+/* OTHER STUFF */
+.hide {
+  display: none; }
+
+nobreak, .nobreak {
+  white-space: nowrap; }
+
+.make-relative {
+  position: relative; }
+
+.give-shadow {
+  box-shadow: 0 0 18px #555; }
+
+/* FB COMMENTS */
+#fb-comments-container .fb-comment-disclaimer {
+  font-size: 16px;
+  line-height: 27px;
+  float: right;
+  margin-bottom: 20px; }
+
+#fb-comments-container {
+  width: 100%; }
+
+/* UNDO STORY PAGE STYLES */
+article p, article h1, article h2, article h3, article h4, article h5, article h6 {
+  max-width: none; }
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  line-height: 1.4em; }
+
+/* advert wrapper */
+.advert-wrapper {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+.right {
+  float: right;
+  margin: 0px 0 25px 25px; }
+
+/* limit content to a 768px, horizontally centered grouping */
+.constrained1024 {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.constrained {
+  max-width: 768px;
+  margin: 0 auto; }
+
+.credits {
+  margin-top: 25px; }
+
+/* Let's make footable nicer, shall we?*/
+.footable {
+  font-family: 'Arial', sans-serif; }
+
+.footable > thead > tr > th {
+  border-radius: 0;
+  background-color: #144A7C;
+  background-image: none;
+  color: #fff;
+  text-shadow: none; }
+
+.footable tbody tr:nth-child(even) {
+  background: #E2EAF1; }
+
+.footable > thead > tr > th:last-child, .footable > thead > tr > td:last-child, .footable > thead > tr > th:first-child, .footable > thead > tr > td:first-child {
+  border-radius: 0; }
+
+/*VIDEO WRAPPERS*/
+.video-wrapper.youtube {
+  padding-bottom: 56.7%; }
+
+/* perfect for charting legends*/
+.box {
+  display: inline-block;
+  background-color: black;
+  height: 13px;
+  width: 13px;
+  margin: 0 5px 0 15px; }
+
+/*basic chart styles*/
+.grafx-wrapper p {
+  font-family: 'Arial', sans-serif; }
+
+.grafx-wrapper .explainer {
+  font-family: 'arial', sans-serif;
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #666; }
+
+.grafx-wrapper .grfx-label {
+  font-family: 'arial', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.3em;
+  margin-bottom: 3px; }
+
+/* Bootstrap tooltips */
+.tooltip-inner {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold; }
+
+#intro {
+  margin-bottom: 25px; }
+
+#intro h1 {
+  font-size: 50px;
+  line-height: 1.2em; }
+
+/* LOLLA CHART */
+#moments-link {
+  display: block; }
+
+#moments-link img {
+  max-width: 150px;
+  float: left;
+  margin-right: 15px; }
+
+.table td, .table th {
+  border-top: none;
+  border-bottom: none;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Arial', sans-serif; }
+
+.table th {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.band {
+  width: 100%;
+  display: block;
+  height: 3px;
+  cursor: default; }
+
+.mobile-band--indie, .band--indie, #chart-key .box--indie {
+  background-color: #557DA8; }
+
+.mobile-band--alternative, .band--alternative, #chart-key .box--alternative {
+  background-color: #B1C5DF; }
+
+.mobile-band--raphiphop, .mobile-band--rap_hiphop, .band--raphiphop, .band--rap_hiphop, #chart-key .box--raphiphop, #chart-key .box--rap_hiphop {
+  background-color: #390034; }
+
+.mobile-band--electronica, .band--electronica, #chart-key .box--electronica {
+  background-color: #A50018; }
+
+.mobile-band--dancehouse, .mobile-band--dance_house, .band--dancehouse, .band--dance_house, #chart-key .box--dancehouse, #chart-key .box--dance_house {
+  background-color: #C35512; }
+
+.mobile-band--rock, .band--rock, #chart-key .box--rock {
+  background-color: #2E542B; }
+
+.mobile-band--punk, .band--punk, #chart-key .box--punk {
+  background-color: #9CC400; }
+
+.mobile-band--pop, .band--pop, #chart-key .box--pop {
+  background-color: #B79808; }
+
+.mobile-band--other, .band--other, #chart-key .box--other {
+  background-color: #E3D5BA; }
+
+.zoomer {
+  margin-left: 10px; }
+
+#lolla-chart table td, #lolla-chart table th {
+  width: 5.5%;
+  line-height: 1.2em; }
+
+#lolla-chart.zoomed .band {
+  height: 15px;
+  margin-bottom: 2px;
+  cursor: pointer; }
+
+h3.raphiphop, h3.electronica, h3.rock, h3.indie {
+  color: #fff; }
+
+.modal-header {
+  padding: 0; }
+
+.modal-header h3 {
+  padding: 9px 15px;
+  display: block; }
+
+.unhighlighted, .unhighlighted-click {
+  opacity: .15; }
+
+.highlighted, .highlighted-click {
+  opacity: 1;
+  box-shadow: 4px 4px 4px #aaa; }
+
+.btn.highlighted,
+.btn.highlighted-click {
+  opacity: 1;
+  box-shadow: none;
+  background-color: #FDEFBA; }
+
+.btn.highlighted-click {
+  color: #000;
+  font-weight: bold; }
+
+/* COLOR KEY */
+#chart-key {
+  background-color: #fbfcfc;
+  /*	border:1px solid #888;
+*/ }
+
+#chart-key table {
+  display: none; }
+
+#chart-key.affix table {
+  display: table; }
+
+#chart-key.affix {
+  box-shadow: 4px 4px 4px #adadad;
+  top: 41px;
+  padding-top: 15px;
+  z-index: 1001; }
+
+#chart-key ul {
+  margin-top: 10px; }
+
+#chart-key li {
+  min-width: 8%;
+  padding: 0; }
+
+#chart-key .box {
+  margin: 0 0 5px 0;
+  display: block;
+  width: 100%;
+  box-shadow: none; }
+
+.genre-btn {
+  /*float:left;*/
+  display: block;
+  /*width: 9%;*/
+  text-align: left;
+  padding: 10px 10px;
+  background-color: transparent;
+  border: none;
+  /*margin-top:10px;*/ }
+
+/*.genre-btn:hover{
+	background-color:#fbfcfc;
+}*/
+.image img {
+  max-width: 50%;
+  float: left;
+  margin: 0 15px 0 0; }
+
+/* MOBILE */
+#chart-wrapper-mobile th {
+  text-align: left; }
+
+#chart-wrapper-mobile td {
+  padding: 3px 0; }
+
+#chart-wrapper-mobile thead tr {
+  border-bottom: 1px solid black; }
+
+#chart-wrapper-mobile tbody tr {
+  border: none; }
+
+#chart-wrapper-mobile td.year {
+  width: 12%;
+  text-align: left; }
+
+#chart-wrapper-mobile td.totals {
+  width: 13%;
+  text-align: right; }
+
+#chart-wrapper-mobile td.totals em {
+  margin-right: 8px; }
+
+#chart-wrapper-mobile td.bars {
+  width: 75%;
+  text-align: left; }
+
+.mobile-band {
+  height: 30px;
+  float: left; }
+
+.moment-wrapper {
+  clear: both;
+  margin-bottom: 45px; }
+
+.moment-wrapper h4 {
+  font-family: 'Arial', sans-serif; }
+
+.moment-wrapper img {
+  float: right;
+  margin: 0 0 0 15px;
+  max-width: 150px;
+  width: 100%; }
+
+#mobile-color-key {
+  margin-bottom: 15px; }
+
+#mobile-color-key p {
+  max-width: none;
+  display: inline-block;
+  width: 46%;
+  margin: 4px 0;
+  padding: 0;
+  line-height: 1.2em;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px; }
+
+.years {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .years--header {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold; }
+  .years .year {
+    height: 100%; }
+
+@media (max-width: 1024px) {
+  .band {
+    height: 2px; }
+  #lolla-chart.zoomed .band {
+    height: 20px;
+    margin-bottom: 4px; } }
+
+@media (max-width: 1000px) {
+  #chart-key.affix {
+    top: 0; } }
+
+@media (max-width: 990px) {
+  #chart-key li {
+    width: 15%; }
+  .genre-btn {
+    padding: 6px 10px 2px 10px; }
+  span.box {
+    height: 8px; } }
+
+@media (max-width: 850px) {
+  .advert-wrapper.right {
+    float: none;
+    margin: 25px 0; }
+  .table td, .table th {
+    padding-left: 1px;
+    padding-right: 1px; } }
+
+@media (max-width: 767px) {
+  .advert-wrapper.right {
+    float: none;
+    margin: 25px 0; }
+  #chart-key li {
+    width: 19%; }
+  .moment-wrapper img {
+    float: none;
+    margin: 15px 0;
+    max-width: none; }
+  .moment-wrapper h2 {
+    font-size: 30px; } }
+
+@media (max-width: 350px) {
+  .advert-wrapper.right,
+  .advert-wrapper {
+    margin-left: -20px; } }
+
+/*# sourceMappingURL=styles.css.map */

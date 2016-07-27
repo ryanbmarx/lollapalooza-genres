@@ -1,0 +1,65 @@
+{#
+
+/* ADD THIS TO YOUR PRIMARY JS FILE */
+
+	var add_facebook_comments = function() {
+	  $("#fb-comments").empty();
+	  var disclaimer = '<div class="fb-comment-disclaimer">The Tribune is using Facebook comments on stories. To post a comment, log into Facebook and then add your comment. To report spam or abuse, click the "X" in the upper right corner of the comment box. In certain circumstances, we will take down entire comment boards. Our commenting guidelines can be found <a href="http://www.chicagotribune.com/about/chi-discussions-faq,0,980840.htmlstory">here &#187;</a>.</div>';
+	  var width = $('#fb-comments').width();
+	  if ( $(window).width() <= 680 )
+	    width = $(window).width() - 40;
+	  var fbml = disclaimer + '<fb:comments href="' +
+	      window.location.protocol +
+	      '//' +
+	      window.location.host +
+	      window.location.pathname +
+	      '" num_posts="10" width="' + width + '"></fb:comments>';
+	  $("#fb-comments").append(fbml);
+	};
+
+
+
+	$(document).ready(function(){
+		console.log('document is ready');
+	  // Load FB comments
+	  if ( $('meta[property="fb:app_id"]').length > 0 )
+	    add_facebook_comments();
+	});	
+	
+
+
+
+   ###### ADD THIS TO YOUR META TAGS ###########
+	<meta property="fb:app_id" content="306836229411287" />
+
+   ###### ADD THIS TO YOUR CSS FILE ###########
+		/* FB COMMENTS */
+		#fb-comments-container .fb-comment-disclaimer {
+			font-size: 16px;
+			line-height: 27px;
+			float: right;
+			margin-bottom: 20px;
+		}
+
+		#fb-comments-container{
+			width:100%;
+		}
+#}
+<article id='comments'>
+	<div class="container- fluid" id="fb-comments-container">
+		<div class="container-fluid-inner">
+			<h3 class="section-head">Comments</h3>
+			<div id="fb-comments"></div>
+		</div>
+	</div>
+  <div id="fb-root"></div>
+  <script type="text/javascript">
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=306836229411287";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+</article>	

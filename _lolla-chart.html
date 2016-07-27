@@ -1,0 +1,22 @@
+{% set year_width = 0.95 * (100 / festivals|length)  %}
+<div id='lolla-chart'>
+<div class='years years--header'>
+			{%- for festival in festivals %}
+				<div class='year year--{{ festival }}' style="width:{{ year_width }}%">
+				{{ festival }}
+				</div>
+			{% endfor %}
+
+</div>
+<div class='years'>
+			{%- for festival in festivals %}
+				<div class='year year--{{ festival }}' style="width:{{ year_width }}%">
+					{%- for artist in artists[1:]|sort(attribute="GENRE") %}
+						{% if artist["year_" ~ festival] == 1|string %}
+							<a href='javascript:void()'class='band band--{{ artist.GENRE }}' title='{{artist.NAME}}' data-artist-id = "{{artist.ID}}"></a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			{% endfor %}
+
+</div>
