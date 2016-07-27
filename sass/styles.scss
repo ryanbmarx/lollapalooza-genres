@@ -29,7 +29,13 @@ article h1,article h2,article h3,article h4,article h5,article h6 {line-height:1
 /* limit content to a 768px, horizontally centered grouping */
 .constrained1024{max-width:1024px;margin:0 auto;}
 .constrained{max-width:768px;margin:0 auto;}
-.credits{margin-top:25px;}
+.credits{
+	margin-top:25px;
+	p{
+		font-size: 12px;
+		color:black;
+	}
+}
 
 /* Let's make footable nicer, shall we?*/
 .footable  {font-family:'Arial', sans-serif;}
@@ -131,8 +137,9 @@ h3.raphiphop, h3.electronica, h3.rock, h3.indie{color:#fff;}
 
 #chart-key{
 	background-color: #fbfcfc;
-/*	border:1px solid #888;
-*/
+	.years{
+		    max-width: 95.95%;
+	}
 }
 
 #chart-key table{display:none;}
@@ -264,12 +271,13 @@ h3.raphiphop, h3.electronica, h3.rock, h3.indie{color:#fff;}
 	display:flex;
 	align-items: center;
 	justify-content: space-between;
-
+    width: 100%;
+    max-width: 97.5%;
+    margin:auto;
 	&--header{
 		text-align:center;
 		font-family: sans-serif;
 		font-size:12px;
-		font-weight: bold;
 	}
 
 	.year{

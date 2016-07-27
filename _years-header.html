@@ -1,0 +1,8 @@
+<div class='years years--header'>
+{%- for festival in festivals %}
+    <div class='year year--{{ festival }}' style="width:{{ year_width }}%">
+        <strong>{{ festival }}</strong><br />
+        <em>{{ totals['year' ~ festival].totals }}</em>
+    </div>
+{% endfor %}
+</div>

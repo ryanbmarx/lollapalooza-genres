@@ -56,6 +56,9 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 
 .credits {
   margin-top: 25px; }
+  .credits p {
+    font-size: 12px;
+    color: black; }
 
 /* Let's make footable nicer, shall we?*/
 .footable {
@@ -209,9 +212,9 @@ h3.raphiphop, h3.electronica, h3.rock, h3.indie {
 
 /* COLOR KEY */
 #chart-key {
-  background-color: #fbfcfc;
-  /*	border:1px solid #888;
-*/ }
+  background-color: #fbfcfc; }
+  #chart-key .years {
+    max-width: 95.95%; }
 
 #chart-key table {
   display: none; }
@@ -317,12 +320,14 @@ h3.raphiphop, h3.electronica, h3.rock, h3.indie {
 .years {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%;
+  max-width: 97.5%;
+  margin: auto; }
   .years--header {
     text-align: center;
     font-family: sans-serif;
-    font-size: 12px;
-    font-weight: bold; }
+    font-size: 12px; }
   .years .year {
     height: 100%; }
 
