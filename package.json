@@ -1,5 +1,5 @@
 {
-  "name": "lollapalooza-genres-updated",
+  "name": "tester2",
   "version": "0.0.1",
   "description": "",
   "main": "js/src/app.js",
@@ -12,8 +12,7 @@
     "type": "git",
     "url": ""
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Chicago Tribune News Applications",
   "license": "MIT",
   "devDependencies": {
@@ -29,5 +28,8 @@
   "browserify": {
     "debug": true
   },
-  "tribune": {}
+  "tribune": {},
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
 }

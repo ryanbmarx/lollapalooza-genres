@@ -5,7 +5,7 @@ Tarbell project configuration
 """
 
 # Google spreadsheet key
-#SPREADSHEET_KEY = "None"
+SPREADSHEET_KEY = "1bZr7IcNqwg2mUtbbuKLJgce4yC-sB9txU7aGHvSO5JY"
 
 # Exclude these files from publication
 EXCLUDES = ['*.md', 'requirements.txt', 'node_modules', 'sass', 'js/src', 'package.json', 'Gruntfile.js']
